@@ -1,0 +1,691 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: vendingmachine.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "vendingmachine.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "vendingmachine"
+Output Format                      : NGC
+Target Device                      : xc3s250e-5-ft256
+
+---- Source Options
+Top Module Name                    : vendingmachine
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "vendingmachine.v" in library work
+Module <vendingmachine> compiled
+No errors in compilation
+Analysis of file <"vendingmachine.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <vendingmachine> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <vendingmachine>.
+INFO:Xst:2546 - "vendingmachine.v" line 18: reading initialization file "data.txt".
+WARNING:Xst:2323 - "vendingmachine.v" line 23: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "vendingmachine.v" line 23: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "vendingmachine.v" line 23: Parameter 4 is not constant in call of system task $display.
+"vendingmachine.v" line 23: $display :  list of product:
+ product code:%d ,Number of product available:%d, price:%d
+
+WARNING:Xst:2323 - "vendingmachine.v" line 24: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "vendingmachine.v" line 24: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "vendingmachine.v" line 24: Parameter 4 is not constant in call of system task $display.
+"vendingmachine.v" line 24: $display :  product code:%d ,Number of product available:%d ,price:%d
+
+WARNING:Xst:2323 - "vendingmachine.v" line 25: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "vendingmachine.v" line 25: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "vendingmachine.v" line 25: Parameter 4 is not constant in call of system task $display.
+"vendingmachine.v" line 25: $display :  product code:%d ,Number of product available:%d ,price:%d
+
+WARNING:Xst:2323 - "vendingmachine.v" line 26: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "vendingmachine.v" line 26: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "vendingmachine.v" line 26: Parameter 4 is not constant in call of system task $display.
+"vendingmachine.v" line 26: $display :  product code:%d ,Number of product available:%d ,price:%d
+
+WARNING:Xst:2323 - "vendingmachine.v" line 53: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "vendingmachine.v" line 53: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "vendingmachine.v" line 53: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "vendingmachine.v" line 53: Parameter 5 is not constant in call of system task $display.
+WARNING:Xst:2323 - "vendingmachine.v" line 53: Parameter 6 is not constant in call of system task $display.
+"vendingmachine.v" line 53: $display :  money=%d , code=%d , count=%d 	 posibilty:%d remain:%d
+WARNING:Xst:905 - "vendingmachine.v" line 21: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <mem>, <posibility>, <remaining>
+Module <vendingmachine> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <vendingmachine>.
+    Related source file is "vendingmachine.v".
+WARNING:Xst:653 - Signal <mem<3><7:6>> is used but never assigned. This sourceless signal will be automatically connected to value 11.
+WARNING:Xst:653 - Signal <mem<3><2:0>> is used but never assigned. This sourceless signal will be automatically connected to value 001.
+WARNING:Xst:653 - Signal <mem<2><7:6>> is used but never assigned. This sourceless signal will be automatically connected to value 10.
+WARNING:Xst:653 - Signal <mem<2><2:0>> is used but never assigned. This sourceless signal will be automatically connected to value 111.
+WARNING:Xst:653 - Signal <mem<1><7:6>> is used but never assigned. This sourceless signal will be automatically connected to value 01.
+WARNING:Xst:653 - Signal <mem<1><2:0>> is used but never assigned. This sourceless signal will be automatically connected to value 100.
+WARNING:Xst:653 - Signal <mem<0><7:6>> is used but never assigned. This sourceless signal will be automatically connected to value 00.
+WARNING:Xst:653 - Signal <mem<0><2:0>> is used but never assigned. This sourceless signal will be automatically connected to value 010.
+WARNING:Xst:646 - Signal <i> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem<0>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem<0>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem<0>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem<1>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem<1>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem<1>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem<2>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem<2>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem<2>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem<3>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem<3>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem<3>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Using one-hot encoding for signal <$old_i_1>.
+    Found 6-bit comparator greater for signal <and0000$cmp_gt0000> created at line 40.
+    Found 3x3-bit multiplier for signal <mult0000$mult0000> created at line 40.
+    Found 6-bit comparator greater for signal <old_posibility_4$cmp_gt0000> created at line 40.
+    Found 3-bit comparator lessequal for signal <old_posibility_4$cmp_le0000> created at line 40.
+    Found 4-bit subtractor for signal <old_remaining_5$addsub0000> created at line 43.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   3 Comparator(s).
+Unit <vendingmachine> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 3x3-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 2
+ 3-bit subtractor                                      : 1
+ 4-bit subtractor                                      : 1
+# Latches                                              : 12
+ 1-bit latch                                           : 12
+# Comparators                                          : 3
+ 3-bit comparator lessequal                            : 1
+ 6-bit comparator greater                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 3x3-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 2
+ 3-bit subtractor                                      : 1
+ 4-bit subtractor                                      : 1
+# Latches                                              : 12
+ 1-bit latch                                           : 12
+# Comparators                                          : 3
+ 3-bit comparator lessequal                            : 1
+ 6-bit comparator greater                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <vendingmachine> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block vendingmachine, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : vendingmachine.ngr
+Top Level Output File Name         : vendingmachine
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 46
+#      LUT2                        : 7
+#      LUT3                        : 11
+#      LUT4                        : 19
+#      LUT4_L                      : 2
+#      MUXF5                       : 7
+# FlipFlops/Latches                : 12
+#      LDE                         : 12
+# IO Buffers                       : 14
+#      IBUF                        : 9
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250eft256-5 
+
+ Number of Slices:                       21  out of   2448     0%  
+ Number of Slice Flip Flops:             12  out of   4896     0%  
+ Number of 4 input LUTs:                 39  out of   4896     0%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    172     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+_old_i_1<3>(_old_i_1<3>1:O)        | NONE(*)(mem<3>_3)      | 3     |
+_old_i_1<2>(_old_i_1<2>1:O)        | NONE(*)(mem<2>_3)      | 3     |
+_old_i_1<1>(_old_i_1<1>1:O)        | NONE(*)(mem<1>_3)      | 3     |
+old_i_1_and0000(old_i_1_and00001:O)| NONE(*)(mem<0>_3)      | 3     |
+-----------------------------------+------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.109ns (Maximum Frequency: 195.722MHz)
+   Minimum input arrival time before clock: 9.938ns
+   Maximum output required time after clock: 8.916ns
+   Maximum combinational path delay: 13.745ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock '_old_i_1<3>'
+  Clock period: 5.109ns (frequency: 195.722MHz)
+  Total number of paths / destination ports: 15 / 6
+-------------------------------------------------------------------------
+Delay:               5.109ns (Levels of Logic = 4)
+  Source:            mem<3>_3 (LATCH)
+  Destination:       mem<3>_3 (LATCH)
+  Source Clock:      _old_i_1<3> falling
+  Destination Clock: _old_i_1<3> falling
+
+  Data Path: mem<3>_3 to mem<3>_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.588   0.426  mem<3>_3 (mem<3>_3)
+     LUT3:I1->O            1   0.612   0.000  _COND_2<3>31_G (N15)
+     MUXF5:I1->O           4   0.278   0.502  _COND_2<3>31 (_COND_2<3>)
+     LUT4_L:I3->LO         1   0.612   0.103  old_posibility_4_cmp_le00001 (old_posibility_4_cmp_le00001)
+     LUT4:I3->O           17   0.612   0.893  posibility113 (posibility_OBUF)
+     LDE:GE                    0.483          mem<3>_3
+    ----------------------------------------
+    Total                      5.109ns (3.185ns logic, 1.924ns route)
+                                       (62.3% logic, 37.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock '_old_i_1<2>'
+  Clock period: 5.109ns (frequency: 195.722MHz)
+  Total number of paths / destination ports: 15 / 6
+-------------------------------------------------------------------------
+Delay:               5.109ns (Levels of Logic = 4)
+  Source:            mem<2>_3 (LATCH)
+  Destination:       mem<2>_3 (LATCH)
+  Source Clock:      _old_i_1<2> falling
+  Destination Clock: _old_i_1<2> falling
+
+  Data Path: mem<2>_3 to mem<2>_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.588   0.426  mem<2>_3 (mem<2>_3)
+     LUT3:I1->O            1   0.612   0.000  _COND_2<3>31_F (N14)
+     MUXF5:I0->O           4   0.278   0.502  _COND_2<3>31 (_COND_2<3>)
+     LUT4_L:I3->LO         1   0.612   0.103  old_posibility_4_cmp_le00001 (old_posibility_4_cmp_le00001)
+     LUT4:I3->O           17   0.612   0.893  posibility113 (posibility_OBUF)
+     LDE:GE                    0.483          mem<2>_3
+    ----------------------------------------
+    Total                      5.109ns (3.185ns logic, 1.924ns route)
+                                       (62.3% logic, 37.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock '_old_i_1<1>'
+  Clock period: 5.070ns (frequency: 197.227MHz)
+  Total number of paths / destination ports: 15 / 6
+-------------------------------------------------------------------------
+Delay:               5.070ns (Levels of Logic = 4)
+  Source:            mem<1>_3 (LATCH)
+  Destination:       mem<1>_3 (LATCH)
+  Source Clock:      _old_i_1<1> falling
+  Destination Clock: _old_i_1<1> falling
+
+  Data Path: mem<1>_3 to mem<1>_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.588   0.387  mem<1>_3 (mem<1>_3)
+     LUT3:I2->O            1   0.612   0.000  _COND_2<3>31_G (N15)
+     MUXF5:I1->O           4   0.278   0.502  _COND_2<3>31 (_COND_2<3>)
+     LUT4_L:I3->LO         1   0.612   0.103  old_posibility_4_cmp_le00001 (old_posibility_4_cmp_le00001)
+     LUT4:I3->O           17   0.612   0.893  posibility113 (posibility_OBUF)
+     LDE:GE                    0.483          mem<1>_3
+    ----------------------------------------
+    Total                      5.070ns (3.185ns logic, 1.885ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'old_i_1_and0000'
+  Clock period: 5.070ns (frequency: 197.227MHz)
+  Total number of paths / destination ports: 15 / 6
+-------------------------------------------------------------------------
+Delay:               5.070ns (Levels of Logic = 4)
+  Source:            mem<0>_3 (LATCH)
+  Destination:       mem<0>_3 (LATCH)
+  Source Clock:      old_i_1_and0000 falling
+  Destination Clock: old_i_1_and0000 falling
+
+  Data Path: mem<0>_3 to mem<0>_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.588   0.387  mem<0>_3 (mem<0>_3)
+     LUT3:I2->O            1   0.612   0.000  _COND_2<3>31_F (N14)
+     MUXF5:I0->O           4   0.278   0.502  _COND_2<3>31 (_COND_2<3>)
+     LUT4_L:I3->LO         1   0.612   0.103  old_posibility_4_cmp_le00001 (old_posibility_4_cmp_le00001)
+     LUT4:I3->O           17   0.612   0.893  posibility113 (posibility_OBUF)
+     LDE:GE                    0.483          mem<0>_3
+    ----------------------------------------
+    Total                      5.070ns (3.185ns logic, 1.885ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock '_old_i_1<3>'
+  Total number of paths / destination ports: 237 / 6
+-------------------------------------------------------------------------
+Offset:              9.938ns (Levels of Logic = 8)
+  Source:            code<1> (PAD)
+  Destination:       mem<3>_3 (LATCH)
+  Destination Clock: _old_i_1<3> falling
+
+  Data Path: code<1> to mem<3>_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            24   1.106   1.216  code_1_IBUF (code_1_IBUF)
+     LUT4:I0->O            5   0.612   0.607  Mmult_mult0000_mult0000_Madd1_lut<1>1 (Mmult_mult0000_mult0000_Madd1_lut<1>)
+     LUT4:I1->O            1   0.612   0.000  old_posibility_4_cmp_gt00002 (old_posibility_4_cmp_gt00002)
+     MUXF5:I0->O           1   0.278   0.509  old_posibility_4_cmp_gt0000_f5 (old_posibility_4_cmp_gt00001)
+     LUT3:I0->O            1   0.612   0.387  posibility35 (posibility35)
+     LUT4:I2->O            1   0.612   0.360  posibility14_SW0_SW0 (N18)
+     LUT4:I3->O            1   0.612   0.426  posibility14_SW0 (N8)
+     LUT4:I1->O           17   0.612   0.893  posibility113 (posibility_OBUF)
+     LDE:GE                    0.483          mem<3>_3
+    ----------------------------------------
+    Total                      9.938ns (5.539ns logic, 4.399ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock '_old_i_1<2>'
+  Total number of paths / destination ports: 237 / 6
+-------------------------------------------------------------------------
+Offset:              9.938ns (Levels of Logic = 8)
+  Source:            code<1> (PAD)
+  Destination:       mem<2>_3 (LATCH)
+  Destination Clock: _old_i_1<2> falling
+
+  Data Path: code<1> to mem<2>_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            24   1.106   1.216  code_1_IBUF (code_1_IBUF)
+     LUT4:I0->O            5   0.612   0.607  Mmult_mult0000_mult0000_Madd1_lut<1>1 (Mmult_mult0000_mult0000_Madd1_lut<1>)
+     LUT4:I1->O            1   0.612   0.000  old_posibility_4_cmp_gt00002 (old_posibility_4_cmp_gt00002)
+     MUXF5:I0->O           1   0.278   0.509  old_posibility_4_cmp_gt0000_f5 (old_posibility_4_cmp_gt00001)
+     LUT3:I0->O            1   0.612   0.387  posibility35 (posibility35)
+     LUT4:I2->O            1   0.612   0.360  posibility14_SW0_SW0 (N18)
+     LUT4:I3->O            1   0.612   0.426  posibility14_SW0 (N8)
+     LUT4:I1->O           17   0.612   0.893  posibility113 (posibility_OBUF)
+     LDE:GE                    0.483          mem<2>_3
+    ----------------------------------------
+    Total                      9.938ns (5.539ns logic, 4.399ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock '_old_i_1<1>'
+  Total number of paths / destination ports: 237 / 6
+-------------------------------------------------------------------------
+Offset:              9.938ns (Levels of Logic = 8)
+  Source:            code<1> (PAD)
+  Destination:       mem<1>_3 (LATCH)
+  Destination Clock: _old_i_1<1> falling
+
+  Data Path: code<1> to mem<1>_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            24   1.106   1.216  code_1_IBUF (code_1_IBUF)
+     LUT4:I0->O            5   0.612   0.607  Mmult_mult0000_mult0000_Madd1_lut<1>1 (Mmult_mult0000_mult0000_Madd1_lut<1>)
+     LUT4:I1->O            1   0.612   0.000  old_posibility_4_cmp_gt00002 (old_posibility_4_cmp_gt00002)
+     MUXF5:I0->O           1   0.278   0.509  old_posibility_4_cmp_gt0000_f5 (old_posibility_4_cmp_gt00001)
+     LUT3:I0->O            1   0.612   0.387  posibility35 (posibility35)
+     LUT4:I2->O            1   0.612   0.360  posibility14_SW0_SW0 (N18)
+     LUT4:I3->O            1   0.612   0.426  posibility14_SW0 (N8)
+     LUT4:I1->O           17   0.612   0.893  posibility113 (posibility_OBUF)
+     LDE:GE                    0.483          mem<1>_3
+    ----------------------------------------
+    Total                      9.938ns (5.539ns logic, 4.399ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'old_i_1_and0000'
+  Total number of paths / destination ports: 237 / 6
+-------------------------------------------------------------------------
+Offset:              9.938ns (Levels of Logic = 8)
+  Source:            code<1> (PAD)
+  Destination:       mem<0>_3 (LATCH)
+  Destination Clock: old_i_1_and0000 falling
+
+  Data Path: code<1> to mem<0>_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            24   1.106   1.216  code_1_IBUF (code_1_IBUF)
+     LUT4:I0->O            5   0.612   0.607  Mmult_mult0000_mult0000_Madd1_lut<1>1 (Mmult_mult0000_mult0000_Madd1_lut<1>)
+     LUT4:I1->O            1   0.612   0.000  old_posibility_4_cmp_gt00002 (old_posibility_4_cmp_gt00002)
+     MUXF5:I0->O           1   0.278   0.509  old_posibility_4_cmp_gt0000_f5 (old_posibility_4_cmp_gt00001)
+     LUT3:I0->O            1   0.612   0.387  posibility35 (posibility35)
+     LUT4:I2->O            1   0.612   0.360  posibility14_SW0_SW0 (N18)
+     LUT4:I3->O            1   0.612   0.426  posibility14_SW0 (N8)
+     LUT4:I1->O           17   0.612   0.893  posibility113 (posibility_OBUF)
+     LDE:GE                    0.483          mem<0>_3
+    ----------------------------------------
+    Total                      9.938ns (5.539ns logic, 4.399ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock '_old_i_1<2>'
+  Total number of paths / destination ports: 15 / 5
+-------------------------------------------------------------------------
+Offset:              8.916ns (Levels of Logic = 6)
+  Source:            mem<2>_3 (LATCH)
+  Destination:       remaining<3> (PAD)
+  Source Clock:      _old_i_1<2> falling
+
+  Data Path: mem<2>_3 to remaining<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.588   0.426  mem<2>_3 (mem<2>_3)
+     LUT3:I1->O            1   0.612   0.000  _COND_2<3>31_F (N14)
+     MUXF5:I0->O           4   0.278   0.502  _COND_2<3>31 (_COND_2<3>)
+     LUT4_L:I3->LO         1   0.612   0.103  old_posibility_4_cmp_le00001 (old_posibility_4_cmp_le00001)
+     LUT4:I3->O           17   0.612   1.045  posibility113 (posibility_OBUF)
+     LUT4:I0->O            1   0.612   0.357  _old_remaining_5<2>1 (remaining_2_OBUF)
+     OBUF:I->O                 3.169          remaining_2_OBUF (remaining<2>)
+    ----------------------------------------
+    Total                      8.916ns (6.483ns logic, 2.433ns route)
+                                       (72.7% logic, 27.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'old_i_1_and0000'
+  Total number of paths / destination ports: 15 / 5
+-------------------------------------------------------------------------
+Offset:              8.877ns (Levels of Logic = 6)
+  Source:            mem<0>_3 (LATCH)
+  Destination:       remaining<3> (PAD)
+  Source Clock:      old_i_1_and0000 falling
+
+  Data Path: mem<0>_3 to remaining<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.588   0.387  mem<0>_3 (mem<0>_3)
+     LUT3:I2->O            1   0.612   0.000  _COND_2<3>31_F (N14)
+     MUXF5:I0->O           4   0.278   0.502  _COND_2<3>31 (_COND_2<3>)
+     LUT4_L:I3->LO         1   0.612   0.103  old_posibility_4_cmp_le00001 (old_posibility_4_cmp_le00001)
+     LUT4:I3->O           17   0.612   1.045  posibility113 (posibility_OBUF)
+     LUT4:I0->O            1   0.612   0.357  _old_remaining_5<2>1 (remaining_2_OBUF)
+     OBUF:I->O                 3.169          remaining_2_OBUF (remaining<2>)
+    ----------------------------------------
+    Total                      8.877ns (6.483ns logic, 2.394ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock '_old_i_1<3>'
+  Total number of paths / destination ports: 15 / 5
+-------------------------------------------------------------------------
+Offset:              8.916ns (Levels of Logic = 6)
+  Source:            mem<3>_3 (LATCH)
+  Destination:       remaining<3> (PAD)
+  Source Clock:      _old_i_1<3> falling
+
+  Data Path: mem<3>_3 to remaining<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.588   0.426  mem<3>_3 (mem<3>_3)
+     LUT3:I1->O            1   0.612   0.000  _COND_2<3>31_G (N15)
+     MUXF5:I1->O           4   0.278   0.502  _COND_2<3>31 (_COND_2<3>)
+     LUT4_L:I3->LO         1   0.612   0.103  old_posibility_4_cmp_le00001 (old_posibility_4_cmp_le00001)
+     LUT4:I3->O           17   0.612   1.045  posibility113 (posibility_OBUF)
+     LUT4:I0->O            1   0.612   0.357  _old_remaining_5<2>1 (remaining_2_OBUF)
+     OBUF:I->O                 3.169          remaining_2_OBUF (remaining<2>)
+    ----------------------------------------
+    Total                      8.916ns (6.483ns logic, 2.433ns route)
+                                       (72.7% logic, 27.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock '_old_i_1<1>'
+  Total number of paths / destination ports: 15 / 5
+-------------------------------------------------------------------------
+Offset:              8.877ns (Levels of Logic = 6)
+  Source:            mem<1>_3 (LATCH)
+  Destination:       remaining<3> (PAD)
+  Source Clock:      _old_i_1<1> falling
+
+  Data Path: mem<1>_3 to remaining<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.588   0.387  mem<1>_3 (mem<1>_3)
+     LUT3:I2->O            1   0.612   0.000  _COND_2<3>31_G (N15)
+     MUXF5:I1->O           4   0.278   0.502  _COND_2<3>31 (_COND_2<3>)
+     LUT4_L:I3->LO         1   0.612   0.103  old_posibility_4_cmp_le00001 (old_posibility_4_cmp_le00001)
+     LUT4:I3->O           17   0.612   1.045  posibility113 (posibility_OBUF)
+     LUT4:I0->O            1   0.612   0.357  _old_remaining_5<2>1 (remaining_2_OBUF)
+     OBUF:I->O                 3.169          remaining_2_OBUF (remaining<2>)
+    ----------------------------------------
+    Total                      8.877ns (6.483ns logic, 2.394ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 427 / 5
+-------------------------------------------------------------------------
+Delay:               13.745ns (Levels of Logic = 10)
+  Source:            code<1> (PAD)
+  Destination:       remaining<3> (PAD)
+
+  Data Path: code<1> to remaining<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            24   1.106   1.216  code_1_IBUF (code_1_IBUF)
+     LUT4:I0->O            5   0.612   0.607  Mmult_mult0000_mult0000_Madd1_lut<1>1 (Mmult_mult0000_mult0000_Madd1_lut<1>)
+     LUT4:I1->O            1   0.612   0.000  old_posibility_4_cmp_gt00002 (old_posibility_4_cmp_gt00002)
+     MUXF5:I0->O           1   0.278   0.509  old_posibility_4_cmp_gt0000_f5 (old_posibility_4_cmp_gt00001)
+     LUT3:I0->O            1   0.612   0.387  posibility35 (posibility35)
+     LUT4:I2->O            1   0.612   0.360  posibility14_SW0_SW0 (N18)
+     LUT4:I3->O            1   0.612   0.426  posibility14_SW0 (N8)
+     LUT4:I1->O           17   0.612   1.045  posibility113 (posibility_OBUF)
+     LUT4:I0->O            1   0.612   0.357  _old_remaining_5<2>1 (remaining_2_OBUF)
+     OBUF:I->O                 3.169          remaining_2_OBUF (remaining<2>)
+    ----------------------------------------
+    Total                     13.745ns (8.837ns logic, 4.908ns route)
+                                       (64.3% logic, 35.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.30 secs
+ 
+--> 
+
+Total memory usage is 296344 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   39 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

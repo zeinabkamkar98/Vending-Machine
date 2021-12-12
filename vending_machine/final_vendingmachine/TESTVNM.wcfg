@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/verilog/final_vendingmachine/test3_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test3" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="5" />
+   <wvobject fp_name="/test3/posibility" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">posibility</obj_property>
+      <obj_property name="ObjectShortName">posibility</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test3/remaining" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">remaining[3:0]</obj_property>
+      <obj_property name="ObjectShortName">remaining[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test3/code" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">code[1:0]</obj_property>
+      <obj_property name="ObjectShortName">code[1:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff0000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test3/count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count[2:0]</obj_property>
+      <obj_property name="ObjectShortName">count[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test3/money" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">money[3:0]</obj_property>
+      <obj_property name="ObjectShortName">money[3:0]</obj_property>
+   </wvobject>
+</wave_config>

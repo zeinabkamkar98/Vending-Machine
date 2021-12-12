@@ -1,0 +1,60 @@
+ISim log file
+Running: E:\verilog\final_vendingmachine\vending_machine_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/verilog/final_vendingmachine/vending_machine_test_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+ list of product:
+ product code:0 ,Number of product available:3, price:2
+
+ product code:1 ,Number of product available:5 ,price:4
+
+ product code:2 ,Number of product available:3 ,price:7
+
+ product code:3 ,Number of product available:3 ,price:1
+
+ money= 0 , code=0 , count=0 	 posibilty:0 remain: 0
+Finished circuit initialization process.
+ list of product:
+ product code:0 ,Number of product available:3, price:2
+
+ product code:1 ,Number of product available:5 ,price:4
+
+ product code:2 ,Number of product available:3 ,price:7
+
+ product code:3 ,Number of product available:3 ,price:1
+
+ money=15 , code=0 , count=1 	 posibilty:1 remain:13
+ list of product:
+ product code:0 ,Number of product available:2, price:2
+
+ product code:1 ,Number of product available:5 ,price:4
+
+ product code:2 ,Number of product available:2 ,price:7
+
+ product code:3 ,Number of product available:2 ,price:1
+
+ money=15 , code=1 , count=1 	 posibilty:1 remain:11
+ list of product:
+ product code:0 ,Number of product available:2, price:2
+
+ product code:1 ,Number of product available:4 ,price:4
+
+ product code:2 ,Number of product available:2 ,price:7
+
+ product code:3 ,Number of product available:2 ,price:1
+
+ money=15 , code=2 , count=1 	 posibilty:1 remain: 8
+ list of product:
+ product code:0 ,Number of product available:2, price:2
+
+ product code:1 ,Number of product available:4 ,price:4
+
+ product code:2 ,Number of product available:2 ,price:7
+
+ product code:3 ,Number of product available:2 ,price:1
+
+ money=15 , code=3 , count=1 	 posibilty:1 remain:14
